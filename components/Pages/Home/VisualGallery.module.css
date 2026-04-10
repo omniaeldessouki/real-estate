@@ -1,0 +1,126 @@
+.section {
+    position: relative;
+    padding: 3.5rem 1rem;
+    background-color: #f5f5f5;
+    overflow: hidden;
+  }
+  
+  .bgRadial {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse 85% 55% at 50% -15%, rgba(0,32,69,0.11), transparent);
+  }
+  
+
+  .heading {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .headingSub {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+  
+  .headingTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+  }
+  
+  .headingDesc {
+    font-size: 0.875rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .galleryWrapper {
+    border-radius: 1.75rem;
+    background-color: rgba(245,245,245,0.8);
+    border: 1px solid rgba(0,0,0,0.2);
+    backdrop-filter: blur(6px);
+    padding: 0.75rem;
+    box-shadow: 0 24px 80px -24px rgba(0,0,0,0.35);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .galleryWrapper {
+      box-shadow: 0 24px 80px -24px rgba(0,0,0,0.55);
+    }
+  }
+  
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  }
+  
+  .figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    ring: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .figureImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease, filter 0.7s ease;
+  }
+  
+  .figure:hover .figureImg {
+    transform: scale(1.04);
+    filter: brightness(1.03);
+  }
+  
+  .figureOverlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to top right, rgba(0,0,0,0.25), transparent);
+    opacity: 0.8;
+    transition: opacity 0.5s;
+  }
+  
+  .figure:hover .figureOverlay {
+    opacity: 1;
+  }
+  
+  .figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.25), transparent);
+    z-index: 10;
+    color: white;
+  }
+  
+  .figcaptionTitle {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .figcaptionSub {
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.75);
+    margin-top: 0.25rem;
+  }

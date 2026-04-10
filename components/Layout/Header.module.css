@@ -1,0 +1,343 @@
+/* Brand + layout tokens (aligned with app/globals.css theme) */
+.navRoot {
+  position: fixed;
+  top: 0;
+  z-index: 60;
+  width: 100%;
+  background: rgb(255 255 255 / 0.8);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navRoot {
+    background: rgb(15 23 42 / 0.8);
+    box-shadow: none;
+  }
+}
+
+.navInner {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  max-width: 80rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .navInner {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navInner {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.logo {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 0.5rem;
+  font-family: var(--font-headline, ui-serif, Georgia, serif);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 640px) {
+  .logo {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    color: rgb(241 245 249);
+  }
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-family: var(--font-label, ui-sans-serif, system-ui, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.25rem;
+  color: rgb(100 116 139);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.navLink:hover {
+  color: rgb(15 23 42);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navLink {
+    color: rgb(148 163 184);
+  }
+
+  .navLink:hover {
+    color: rgb(241 245 249);
+  }
+}
+
+.navLinkActive {
+  font-weight: 600;
+  color: rgb(15 23 42);
+  border-bottom-color: rgb(15 23 42);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navLinkActive {
+    color: rgb(255 255 255);
+    border-bottom-color: rgb(255 255 255);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.scheduleCtaDesktop {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  padding: 0.625rem 1.5rem;
+  font-family: var(--font-label, ui-sans-serif, system-ui, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--color-primary, #1e3a5f);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.scheduleCtaDesktop:hover {
+  background: var(--color-primary-container, #162a44);
+}
+
+.scheduleCtaDesktop:active {
+  transform: scale(0.95);
+}
+
+@media (min-width: 768px) {
+  .scheduleCtaDesktop {
+    display: inline-flex;
+  }
+}
+
+.menuButton {
+  display: inline-flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(203 213 225 / 0.5);
+  background: rgb(255 255 255 / 0.6);
+  color: rgb(15 23 42);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.05);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.menuButton:hover {
+  background: var(--color-surface-container-low, #f8fafc);
+}
+
+@media (prefers-color-scheme: dark) {
+  .menuButton {
+    border-color: rgb(71 85 105);
+    background: rgb(30 41 59 / 0.6);
+    color: rgb(241 245 249);
+  }
+
+  .menuButton:hover {
+    background: rgb(30 41 59);
+  }
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.menuIcon {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background: rgb(15 23 42 / 0.45);
+}
+
+@media (min-width: 768px) {
+  .backdrop {
+    display: none;
+  }
+}
+
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  width: min(100%, 20rem);
+  transform: translateX(100%);
+  transition: transform 0.28s ease;
+  border-left: 1px solid rgb(148 163 184 / 0.25);
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: -12px 0 32px rgb(15 23 42 / 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mobilePanelOpen {
+  transform: translateX(0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mobilePanel {
+    background: rgb(15 23 42 / 0.95);
+    border-left-color: rgb(148 163 184 / 0.2);
+    box-shadow: -12px 0 32px rgb(0 0 0 / 0.35);
+  }
+}
+
+@media (min-width: 768px) {
+  .mobilePanel {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem 1.25rem;
+  font-family: var(--font-label, ui-sans-serif, system-ui, sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .mobileNav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 0.875rem 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(148 163 184 / 0.2);
+  font-family: inherit;
+  font-size: inherit;
+  color: rgb(71 85 105);
+  transition: color 0.15s ease;
+}
+
+.mobileNavLink:hover {
+  color: rgb(15 23 42);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mobileNavLink {
+    color: rgb(148 163 184);
+  }
+
+  .mobileNavLink:hover {
+    color: rgb(241 245 249);
+  }
+}
+
+.mobileNavLinkActive {
+  font-weight: 600;
+  color: rgb(15 23 42);
+}
+
+@media (prefers-color-scheme: dark) {
+  .mobileNavLinkActive {
+    color: rgb(255 255 255);
+  }
+}
+
+.mobileScheduleCta {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  padding: 0.875rem 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--color-primary, #1e3a5f);
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.mobileScheduleCta:hover {
+  background: var(--color-primary-container, #162a44);
+}
+
+.mobileScheduleCta:active {
+  transform: scale(0.98);
+}

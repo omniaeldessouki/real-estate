@@ -1,0 +1,88 @@
+.section {
+  padding: 100px 20px;
+  background: linear-gradient(180deg,#f7fbff,#ffffff);
+}
+
+.header {
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.header h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #666;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 14px;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+
+  transition: all 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover animation */
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* gradient line */
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    #4facfe
+  );
+}
+
+.icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+
+  transition: transform .4s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.2) rotate(6deg);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}

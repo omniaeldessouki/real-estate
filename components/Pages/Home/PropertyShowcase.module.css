@@ -1,0 +1,132 @@
+  .section {
+    width: 100%;
+    padding: 6rem 1rem;
+    background: #f8fafc;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    text-align: center;
+    max-width: 40rem;
+    margin: auto;
+    margin-bottom: 3rem;
+  }
+  
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+  
+  .title {
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    margin-top: 0.5rem;
+    color: var(--color-primary);
+  }
+  
+  .subtitle {
+    margin-top: 0.6rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+  
+  .slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  }
+  
+  .track {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  .caption {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 2rem;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.2),
+      transparent
+    );
+    color: white;
+  }
+  
+  .captionTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .captionDesc {
+    font-size: 0.9rem;
+    margin-top: 4px;
+    opacity: 0.9;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prev {
+    left: 12px;
+  }
+  
+  .next {
+    right: 12px;
+  }
+  
+  .dots {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #cbd5e1;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .active {
+    background: var(--color-primary);
+  }

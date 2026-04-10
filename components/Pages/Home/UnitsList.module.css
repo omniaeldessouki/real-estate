@@ -1,0 +1,97 @@
+.unitsSection {
+    padding: 80px 20px;
+  }
+  
+  .unitsContainer {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .unitsHeader {
+    max-width: 500px;
+    margin-bottom: 40px;
+  }
+  
+  .unitsTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color:  var(--color-primary);
+    margin-bottom: 8px;
+  }
+  
+  .unitsText {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .unitsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  .unitCard {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s;
+  }
+  
+  .unitCard:hover {
+    transform: translateX(6px);
+  }
+  
+  .unitMedia {
+    width: 220px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .unitMedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .unitCard:hover img {
+    transform: scale(1.05);
+  }
+  
+  .unitContent {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+  
+  .unitCity {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 6px;
+  }
+  
+  .unitTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color:  var(--color-primary);
+  }
+  
+  .unitDesc {
+    font-size: 14px;
+    color: #666;
+    margin-top: 6px;
+  }
+  
+  .unitPrice {
+    font-size: 12px;
+    text-transform: uppercase;
+    color:  var(--color-primary);
+    white-space: nowrap;
+  }

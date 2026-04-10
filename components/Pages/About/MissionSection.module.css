@@ -1,0 +1,108 @@
+.section{
+    position:relative;
+    padding:120px 20px;
+    background-image:url("/images/real-estate-bg.jpg");
+    background-size:cover;
+    background-position:center;
+  }
+  
+  .overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.9),
+      rgba(255,255,255,0.95)
+    );
+  }
+  
+  .container{
+    position:relative;
+    max-width: 1220px;
+    margin:auto;
+    display:flex;
+    align-items:stretch;
+  }
+  
+  /* LEFT CARD */
+  .leftCard{
+    flex:2;
+    background: var(--color-primary);
+    color:white;
+    padding:50px;
+    border-radius:20px;
+  }
+  
+  .leftCard h2{
+    font-size:40px;
+    margin-bottom:20px;
+    line-height:1.2;
+  }
+  
+  .leftCard p{
+    opacity:0.85;
+    max-width:550px;
+    line-height:1.6;
+    margin-bottom:30px;
+    color: #eee;
+  }
+  
+  .button{
+    background:var(--color-outline-variant);
+    border:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    color: var(--color-primary);
+  }
+  
+  /* RIGHT CARD */
+  .rightCard{
+    flex:1;
+    background:var(--color-outline-variant);
+    padding:40px;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+  
+  .rightCard h3{
+    font-size:26px;
+    margin-bottom:15px;
+    color: var(--color-primary);
+}
+
+.rightCard p{
+    line-height:1.6;
+    font-size:14px;
+    color: var(--color-primary);
+  }
+
+  
+  .controls{
+    margin-top:30px;
+    display:flex;
+    gap:10px;
+  }
+  
+  .controls button{
+    width:40px;
+    height:40px;
+    border-radius:8px;
+    border:1px solid black;
+    background:transparent;
+    cursor:pointer;
+  }
+  
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .container{
+      flex-direction:column;
+    }
+  
+    .leftCard h2{
+      font-size:30px;
+    }
+  }
