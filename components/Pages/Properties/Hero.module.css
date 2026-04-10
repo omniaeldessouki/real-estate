@@ -69,3 +69,15 @@
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   }
+  @media (max-width: 768px) {
+    .maskText {
+      font-size: 48px;
+    }
+  
+    .subtitle {
+      font-size: 16px;
+    }
+    .content {
+      padding: 0 16px;
+    }
+  } 

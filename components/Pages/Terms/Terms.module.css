@@ -1,0 +1,46 @@
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 20px;
+  text-align: center;
+  background: #f5f8fc;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.block h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #1e3a5f;
+}
+
+.block p {
+  color: #555;
+  line-height: 1.7;
+}

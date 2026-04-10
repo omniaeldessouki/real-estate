@@ -5,8 +5,8 @@ import styles from "./Header.module.css";
 
 const NAV_LINKS = [
   { label: "Home", href: "/", pathMatch: "/" },
-  { label: "Services", href: "/services", pathMatch: "/services" },
   { label: "About", href: "/about", pathMatch: "/about" },
+  { label: "Services", href: "/services", pathMatch: "/services" },
   { label: "Properties", href: "/properties", pathMatch: "/properties" },
   { label: "Contact", href: "/contact", pathMatch: "/contact" },
 ];
