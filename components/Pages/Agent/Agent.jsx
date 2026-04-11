@@ -1,6 +1,30 @@
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Agent.module.css";
+
+const listings = [
+  {
+    id: 1,
+    title: "Luxury Villa",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
+    slug: "luxury-villa",
+  },
+  {
+    id: 2,
+    title: "Modern Apartment",
+    image:
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80",
+    slug: "modern-apartment",
+  },
+  {
+    id: 3,
+    title: "Beach House",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+    slug: "beach-house",
+  },
+];
 
 export default function Agent() {
   useEffect(() => {
@@ -27,20 +51,17 @@ export default function Agent() {
                 alt="Agent"
                 fill
                 className={styles.image}
+                unoptimized
               />
             </div>
 
             <div className={styles.info}>
               <h2>Omnia EL Dessouki</h2>
-              <p className={styles.role}>Senior Real Estate Agent</p>
+              <p className={styles.role}>Seo Real Estate Agent</p>
 
               <p>
-                With over 10 years of experience in the real estate market,
-                Omnia has helped hundreds of clients find their dream homes and
-                investment properties. Her expertise in market trends and
-                dedication to client satisfaction make her a trusted advisor in
-                the industry. Whether you're buying, selling, or investing,
-                Omnia is here to guide you every step of the way.
+                With over 3 years of experience in the real estate market,
+                Omnia helps clients find perfect homes and investments.
               </p>
 
               <div className={styles.contact}>
@@ -53,41 +74,27 @@ export default function Agent() {
         </div>
       </section>
 
-      {/* STATS */}
-      <section className={styles.stats}>
-        <div className={styles.container}>
-          <div className={styles.statsGrid}>
-            <div>
-              120+ <p>Properties Sold</p>
-            </div>
-            <div>
-              10+ <p>Years Experience</p>
-            </div>
-            <div>
-              85+ <p>Happy Clients</p>
-            </div>
-            <div>
-              25+ <p>Active Listings</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROPERTIES */}
+      {/* LISTINGS */}
       <section className={styles.properties}>
         <div className={styles.container}>
           <h2>Agent Listings</h2>
 
           <div className={styles.cards}>
-            <div className={styles.card}>
-              <p>Luxury Villa</p>
-            </div>
-            <div className={styles.card}>
-              <p>Modern Apartment</p>
-            </div>
-            <div className={styles.card}>
-              <p>Beach House</p>
-            </div>
+            {listings.map((item, index) => (
+              <Link href={`/properties/${item.id}`}>
+                <div className={styles.cardImage}>
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className={styles.img}
+                    unoptimized
+                  />
+                </div>
+
+                <p className={styles.cardTitle}>{item.title}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
