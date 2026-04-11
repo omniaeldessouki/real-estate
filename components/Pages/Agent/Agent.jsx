@@ -47,7 +47,7 @@ export default function Agent() {
           <div className={styles.profileGrid}>
             <div className={styles.imageWrapper}>
               <Image
-                src="/images/agent.jpg"
+                src="/omnia.png"
                 alt="Agent"
                 fill
                 className={styles.image}
@@ -57,7 +57,7 @@ export default function Agent() {
 
             <div className={styles.info}>
               <h2>Omnia EL Dessouki</h2>
-              <p className={styles.role}>Seo Real Estate Agent</p>
+              <p className={styles.role}>SEO Specialist • Real Estate Agent</p>
 
               <p>
                 With over 3 years of experience in the real estate market,

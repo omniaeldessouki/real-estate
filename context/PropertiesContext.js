@@ -23,8 +23,8 @@ export function PropertiesProvider({ children }) {
         "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
       ],
 
-      beds: 4,
-      baths: 3,
+      beds: 5,
+      baths: 6,
       area: "320 m²",
 
       description:
@@ -50,7 +50,7 @@ export function PropertiesProvider({ children }) {
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
       ],
 
-      beds: 5,
+      beds: 6,
       baths: 6,
       area: "6200 sqft",
 
@@ -236,8 +236,8 @@ export function PropertiesProvider({ children }) {
         "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
       ],
 
-      beds: 3,
-      baths: 3,
+      beds: 6,
+      baths: 6,
       area: "300 m²",
 
       description:
@@ -263,8 +263,8 @@ export function PropertiesProvider({ children }) {
         "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
       ],
 
-      beds: 4,
-      baths: 4,
+      beds: 5,
+      baths: 5,
       area: "4100 sqft",
 
       description: "Modern desert house with luxury finishes and scenic views.",
@@ -283,14 +283,10 @@ export function PropertiesProvider({ children }) {
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
         "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
         "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498f",
-        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9",
       ],
 
       beds: 5,
-      baths: 6,
+      baths: 3,
       area: "6000 sqft",
 
       description:
