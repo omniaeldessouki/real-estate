@@ -13,6 +13,8 @@
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 10px;
+  color: #1e3a5f;
+  font-weight: 700;
 }
 
 .hero p {

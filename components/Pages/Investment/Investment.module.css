@@ -11,7 +11,11 @@
   margin: 0 auto;
   padding: 0 16px;
 }
-
+.container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1e3a5f;
+}
 /* HERO */
 .hero {
   padding: 120px 20px;
@@ -22,6 +26,8 @@
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .hero p {
